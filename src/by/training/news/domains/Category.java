@@ -2,12 +2,23 @@ package by.training.news.domains;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "category") 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Category {
+	@XmlAttribute(required = true)
 	private String catName;
+	
+	@XmlElement(name = "subcategory")
 	private List<SubCategory> subCategori;
 
 	public Category() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Category(String catName) {
@@ -36,5 +47,14 @@ public class Category {
 		}
 	}
 	
+	public SubCategory getSubcategoryByName(String subcategoryN) { 
+		 		for(SubCategory subcategory:subCategori){ 
+		 			if(subcategoryN.equals(subcategory.getSubName())){ 
+		 				return subcategory; 
+					} 
+		 		} 
+		 		return new SubCategory(subcategoryN); 
+		 	} 
+
 	
 }
