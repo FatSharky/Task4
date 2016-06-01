@@ -29,6 +29,10 @@ public class ReqFindNews implements IRequest {
 
 	}
 
+	public ICriteria getParams() {
+		return criteria;
+	}
+
 	public ICriteria getCriteria() {
 		return criteria;
 	}

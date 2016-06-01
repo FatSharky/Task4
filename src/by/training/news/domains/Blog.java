@@ -34,7 +34,12 @@ public class Blog {
 		 			} 
 		 		} 
 		 		return new Category(categoryN); 
-		 	} 
+		 	}
+
+	@Override
+	public String toString() {
+		return "Blog [categories=" + categories + "]";
+	} 
 
 		 
 		 

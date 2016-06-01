@@ -1,13 +1,13 @@
 package by.training.news.domains.response;
 
-import com.sun.org.apache.xml.internal.resolver.Catalog;
 
 import by.training.news.controller.CommandName;
+import by.training.news.domains.Blog;
 
-public class ResGetCatalog implements IResponse {
+public class ResGetBlog implements IResponse {
 	private boolean status;
 	private String message;
-	private Catalog catalog;
+	private Blog blog;
 
 	@Override
 	public CommandName getCommandType() {
@@ -36,16 +36,16 @@ public class ResGetCatalog implements IResponse {
 		return message;
 	}
 
-	public Catalog getCatalog() {
-		return catalog;
-	}
-
-	public void setCatalog(Catalog catalog) {
-		this.catalog = catalog;
-	}
-
 	public boolean isStatus() {
 		return status;
+	}
+
+	public Blog getBlog() {
+		return blog;
+	}
+
+	public void setBlog(Blog blog) {
+		this.blog = blog;
 	}
 
 }

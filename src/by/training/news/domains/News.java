@@ -53,4 +53,11 @@ public class News {
 		this.newsBody = newsBody;
 	}
 
+	@Override
+	public String toString() {
+		return "News [newsName=" + newsName + ", authors=" + authors + ", dateOfIssue=" + dateOfIssue + ", newsBody="
+				+ newsBody + "]";
+	}
+	
+
 }

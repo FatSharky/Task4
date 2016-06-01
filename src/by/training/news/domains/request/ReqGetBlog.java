@@ -2,7 +2,7 @@ package by.training.news.domains.request;
 
 import by.training.news.controller.CommandName;
 
-public class ReqGetCatalog implements IRequest {
+public class ReqGetBlog implements IRequest {
 	private String title;
 
 	@Override
